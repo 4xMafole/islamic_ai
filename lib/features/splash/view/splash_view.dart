@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:islamic_ai/features/theme/theme.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -6,33 +8,25 @@ class SplashScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: DecoratedBox(
-        decoration: BoxDecoration(
-          gradient: LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [
-              Colors.orange[200]!,
-              Colors.pink[200]!,
-            ],
-          ),
-        ),
-        child: Center(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
-            children: <Widget>[
-              Image.asset('assets/logo.png'),
-              const SizedBox(height: 20),
-              const Text(
-                'Islamic AI',
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+      body: Center(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            SvgPicture.asset(
+              'assets/icons/app_icon.svg',
+              color: const Color(0xFF42A5F5),
+            ),
+            const SizedBox(height: 20),
+            const Text(
+              'Islamic Ai',
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: IAIColor.deepBlue,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
