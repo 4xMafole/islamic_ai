@@ -1,5 +1,6 @@
 name: islamic_ai
-description: Explore authentic Islamic books and receive AI-powered answers to your questions about Islam.
+description: Explore authentic Islamic books and receive AI-powered answers to
+  your questions about Islam.
 version: 1.0.0+1
 publish_to: none
 
@@ -13,6 +14,7 @@ dependencies:
   flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
+  flutter_svg: ^2.0.4
   intl: ^0.17.0
   islamic_gpt:
     path: ./packages/islamic_gpt
@@ -31,3 +33,17 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/
+    - assets/icons/
+  fonts:
+    - family: Poppins
+      fonts:
+        - asset: assets/fonts/poppins/Poppins-Regular.ttf
+        - asset: assets/fonts/poppins/Poppins-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/poppins/Poppins-Italic.ttf
+          style: italic
+        - asset: assets/fonts/poppins/Poppins-BoldItalic.ttf
+          weight: 700
+          style: italic
