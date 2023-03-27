@@ -18,8 +18,8 @@ class IAITheme {
           ),
       primaryTextTheme: ThemeData.light().primaryTextTheme.apply(
             fontFamily: 'Poppins',
-            bodyColor: Colors.white,
-            displayColor: Colors.white,
+            bodyColor: IAIColor.deepBlue,
+            displayColor: IAIColor.deepBlue,
           ),
     );
   }

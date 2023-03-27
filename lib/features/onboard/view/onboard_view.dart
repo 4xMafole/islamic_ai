@@ -8,7 +8,7 @@ class OnBoardView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: IAIColor.primaryBackground,
+      // backgroundColor: IAIColor.primaryBackground,
       body: SafeArea(
         child: SizedBox(
           width: double.infinity,
@@ -33,7 +33,7 @@ class OnBoardView extends StatelessWidget {
                 children: const [
                   HeaderText(
                     text: 'any question',
-                    color: IAIColor.textBlue,
+                    // color: IAIColor.textBlue,
                     fontWeight: FontWeight.w500,
                   ),
                   AssetImagePath(assetPath: 'assets/images/perfect.png'),

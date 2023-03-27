@@ -14,7 +14,6 @@ class SplashScreen extends StatelessWidget {
           children: <Widget>[
             SvgPicture.asset(
               'assets/icons/app_icon.svg',
-              color: const Color(0xFF42A5F5),
             ),
             const SizedBox(height: 20),
             const Text(

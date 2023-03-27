@@ -13,6 +13,7 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       darkTheme: IAITheme.darkTheme(),
       theme: IAITheme.lightTheme(),
+      themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
       home: const OnBoardView(),

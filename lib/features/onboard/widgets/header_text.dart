@@ -18,10 +18,10 @@ class HeaderText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(
       text,
-      style: Theme.of(context).textTheme.titleMedium!.copyWith(
+      style: Theme.of(context).primaryTextTheme.titleMedium!.copyWith(
             fontWeight: fontWeight,
             fontSize: fontSize,
-            color: color,
+            // color: color,
           ),
     );
   }
