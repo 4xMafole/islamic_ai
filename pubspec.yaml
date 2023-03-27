@@ -1,0 +1,33 @@
+name: islamic_ai
+description: Explore authentic Islamic books and receive AI-powered answers to your questions about Islam.
+version: 1.0.0+1
+publish_to: none
+
+environment:
+  sdk: ">=2.18.0 <3.0.0"
+
+dependencies:
+  bloc: ^8.1.1
+  flutter:
+    sdk: flutter
+  flutter_bloc: ^8.1.2
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
+  islamic_gpt:
+    path: ./packages/islamic_gpt
+  islamic_gpt_repository:
+    path: ./packages/islamic_gpt_repository
+  local_api:
+    path: ./packages/local_api
+
+dev_dependencies:
+  bloc_test: ^9.1.1
+  flutter_test:
+    sdk: flutter
+  mocktail: ^0.3.0
+  very_good_analysis: ^3.1.0
+
+flutter:
+  uses-material-design: true
+  generate: true
