@@ -55,9 +55,9 @@ class OnBoardView extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: const [
                     Expanded(child: SizedBox()),
-                    BoardTabBar(color: IAIColor.progressBarActive),
+                    BoardTabBar(color: IAIColor.tabBarActive),
                     SizedBox(width: 8),
-                    BoardTabBar(color: IAIColor.progressBarInactive),
+                    BoardTabBar(color: IAIColor.tabBarInactive),
                     Expanded(child: SizedBox()),
                     InfoText(
                       text: 'Next',

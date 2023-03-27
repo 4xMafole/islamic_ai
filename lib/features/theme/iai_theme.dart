@@ -5,16 +5,17 @@ import 'package:islamic_ai/features/theme/theme.dart';
 class IAITheme {
   static ThemeData lightTheme() {
     return ThemeData.light().copyWith(
-      primaryColor: Colors.blue,
-      accentColor: Colors.blueAccent,
+      scaffoldBackgroundColor: IAIColor.whiteColor,
+      primaryColor: IAIColor.deepBlue,
+      accentColor: IAIColor.deepBlue,
       appBarTheme: const AppBarTheme(
-        backgroundColor: Colors.blue,
-        titleTextStyle: TextStyle(color: Colors.white),
+        backgroundColor: IAIColor.deepBlue,
+        titleTextStyle: TextStyle(color: IAIColor.whiteColor),
       ),
       textTheme: ThemeData.light().textTheme.apply(
             fontFamily: 'Poppins',
-            bodyColor: Colors.black,
-            displayColor: Colors.black,
+            bodyColor: IAIColor.deepBlue,
+            displayColor: IAIColor.deepBlue,
           ),
       primaryTextTheme: ThemeData.light().primaryTextTheme.apply(
             fontFamily: 'Poppins',
