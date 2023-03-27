@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/features/onboard/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
 class OnBoardView extends StatelessWidget {
@@ -14,21 +15,14 @@ class OnBoardView extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Image.asset('assets/images/rocket.png'),
+              const AssetImagePath(assetPath: 'assets/images/rocket.png'),
               const SizedBox(height: 16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'Ask Islamic Ai',
-                    style: TextStyle(
-                      fontWeight: FontWeight.w600,
-                      fontSize: 24,
-                      color: IAIColor.whiteColor,
-                    ),
-                  ),
-                  Image.asset(
-                    'assets/images/perfect.png',
+                children: const [
+                  HeaderText(text: 'Ask Islamic Ai'),
+                  AssetImagePath(
+                    assetPath: 'assets/images/perfect.png',
                     color: Colors.transparent,
                   ),
                 ],
@@ -36,30 +30,22 @@ class OnBoardView extends StatelessWidget {
               const SizedBox(height: 8),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text(
-                    'any question',
-                    style: TextStyle(
-                      fontSize: 24,
-                      color: IAIColor.textBlue,
-                      fontWeight: FontWeight.w500,
-                    ),
+                children: const [
+                  HeaderText(
+                    text: 'any question',
+                    color: IAIColor.textBlue,
+                    fontWeight: FontWeight.w500,
                   ),
-                  Image.asset('assets/images/perfect.png'),
+                  AssetImagePath(assetPath: 'assets/images/perfect.png'),
                 ],
               ),
               const SizedBox(height: 24),
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
-                child: Text(
-                  'Islamic Ai will provide answers based on authentic Islamic books, and will provide '
-                  'references. Please note, this is for Reference ONLY, not Fatwah',
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w400,
-                    fontSize: 16,
-                    color: IAIColor.textGray,
-                  ),
+                child: InfoText(
+                  text:
+                      'Islamic Ai will provide answers based on authentic Islamic books, and will provide '
+                      'references. Please note, this is for Reference ONLY, not Fatwah',
                 ),
               ),
               const SizedBox(height: 32),
@@ -67,35 +53,16 @@ class OnBoardView extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const Expanded(child: SizedBox()),
-                    Container(
-                      height: 4,
-                      width: 32,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: IAIColor.progressBarActive,
-                      ),
+                  children: const [
+                    Expanded(child: SizedBox()),
+                    BoardTabBar(color: IAIColor.progressBarActive),
+                    SizedBox(width: 8),
+                    BoardTabBar(color: IAIColor.progressBarInactive),
+                    Expanded(child: SizedBox()),
+                    InfoText(
+                      text: 'Next',
                     ),
-                    const SizedBox(width: 8),
-                    Container(
-                      height: 4,
-                      width: 32,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: IAIColor.progressBarInactive,
-                      ),
-                    ),
-                    const Expanded(child: SizedBox()),
-                    const Text(
-                      'Next',
-                      style: TextStyle(
-                        color: IAIColor.textGray,
-                        fontWeight: FontWeight.w400,
-                        fontSize: 16,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
+                    SizedBox(height: 16),
                   ],
                 ),
               ),
