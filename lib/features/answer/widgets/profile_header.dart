@@ -31,7 +31,7 @@ class ProfileHeader extends StatelessWidget {
             'Check your profile',
             style: TextStyle(
               fontWeight: FontWeight.w400,
-              fontSize: 15,
+              fontSize: 13,
               color: IAIColor.tabBarActive,
             ),
           ),
