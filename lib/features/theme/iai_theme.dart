@@ -9,8 +9,8 @@ class IAITheme {
       primaryColor: IAIColor.deepBlue,
       accentColor: IAIColor.deepBlue,
       appBarTheme: const AppBarTheme(
-        backgroundColor: IAIColor.deepBlue,
-        titleTextStyle: TextStyle(color: IAIColor.whiteColor),
+        backgroundColor: IAIColor.whiteColor,
+        titleTextStyle: TextStyle(color: IAIColor.deepBlue),
       ),
       textTheme: ThemeData.light().textTheme.apply(
             fontFamily: 'Poppins',

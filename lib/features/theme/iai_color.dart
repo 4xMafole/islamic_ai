@@ -10,6 +10,7 @@ class IAIColor {
   static const Color tabBarInactive = Color(0xFFD6DFFF);
   static const Color containerBackground = Color(0xFFF5F9FE);
   static const Color subTitle = Color(0xFF61677D);
+  static const Color sentence = Color(0xFF7C8BA0);
   static const Color separator = Color(0xFF262626);
   static const Color termsHighlight = Color(0xFF3461FD);
 }

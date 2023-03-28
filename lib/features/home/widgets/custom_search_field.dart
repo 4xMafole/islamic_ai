@@ -7,11 +7,12 @@ class CustomSearchField extends StatefulWidget {
     required this.hintText,
     required this.inputType,
     required this.onPressed,
+    this.hasBorder = true,
   });
   final String hintText;
   final TextInputType inputType;
   final void Function()? onPressed;
-
+  final bool hasBorder;
   @override
   _CustomSearchFieldState createState() => _CustomSearchFieldState();
 }
@@ -36,8 +37,11 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
 
   @override
   Widget build(BuildContext context) {
-    final borderColor =
-        _focusNode.hasFocus ? IAIColor.deepBlue : IAIColor.textGray;
+    final borderColor = widget.hasBorder
+        ? _focusNode.hasFocus
+            ? IAIColor.deepBlue
+            : IAIColor.textGray
+        : Colors.transparent;
 
     return Container(
       width: 345,

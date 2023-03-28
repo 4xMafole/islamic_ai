@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:islamic_ai/common/widgets/app_logo.dart';
 import 'package:islamic_ai/features/home/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
@@ -25,26 +26,7 @@ class _HomeViewState extends State<HomeView> {
             ),
             child: Column(
               children: [
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SvgPicture.asset(
-                      'assets/icons/app_icon.svg',
-                      width: 60,
-                      height: 60,
-                    ),
-                    const SizedBox(width: 16),
-                    const Text(
-                      'Islamic Ai',
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        fontWeight: FontWeight.w600,
-                        fontSize: 24,
-                        color: IAIColor.deepBlue,
-                      ),
-                    ),
-                  ],
-                ),
+                const AppLogo(logoSize: 60, nameSize: 24),
                 const SizedBox(height: 24),
                 CustomSearchField(
                   hintText: 'Enter your Question',
