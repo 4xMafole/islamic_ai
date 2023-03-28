@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_ai/features/sign_in/view/view.dart';
+import 'package:islamic_ai/features/forget_password/forget_password.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 import 'package:islamic_ai/l10n/l10n.dart';
 
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const SignInView(),
+      home: const ForgetPasswordView(),
     );
   }
 }
