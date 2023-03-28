@@ -1,17 +1,18 @@
+import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:islamic_ai/common/widgets/app_logo.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/settings/widgets/feedback_box.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
-class FeedbackView extends StatefulWidget {
-  const FeedbackView({super.key});
+class AgreementView extends StatefulWidget {
+  const AgreementView({super.key});
 
   @override
-  _FeedbackViewState createState() => _FeedbackViewState();
+  _AgreementViewState createState() => _AgreementViewState();
 }
 
-class _FeedbackViewState extends State<FeedbackView> {
+class _AgreementViewState extends State<AgreementView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,27 +29,31 @@ class _FeedbackViewState extends State<FeedbackView> {
               top: 32,
               left: 16,
               right: 16,
+              bottom: 16,
             ),
             child: Center(
               child: Column(
-                children: const [
-                  Text(
-                    'Feedback',
+                children: [
+                  const Text(
+                    'Term & Conditions',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
                       fontSize: 18,
                       color: IAIColor.blackColor,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  FeedbackBox(
-                    hintText: 'Please give us your honest feedback.',
-                    inputType: TextInputType.multiline,
+                  Text(
+                    faker.lorem.sentences(50).toString(),
+                    textAlign: TextAlign.justify,
+                    style: const TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 14,
+                      color: IAIColor.subTitle,
+                    ),
                   ),
-                  SizedBox(height: 32),
-                  CustomButton(text: 'Submit')
                 ],
               ),
             ),

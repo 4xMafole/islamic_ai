@@ -23,7 +23,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
         leading: IconButton(
           icon: Icon(
             leadingIconData,
-            color: IAIColor.deepBlue,
+            color: IAIColor.separator,
           ),
           onPressed: onPressed,
         ),

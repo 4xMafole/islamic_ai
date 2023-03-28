@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:islamic_ai/features/answer/answer.dart';
 import 'package:islamic_ai/features/home/home.dart';
 import 'package:islamic_ai/features/profile/view/edit_profile_view.dart';
+import 'package:islamic_ai/features/settings/settings.dart';
 import 'package:islamic_ai/features/settings/view/feedback_view.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 import 'package:islamic_ai/l10n/l10n.dart';

@@ -27,7 +27,7 @@ class _EditProfileViewState extends State<EditProfileView> {
           style: TextStyle(
             fontWeight: FontWeight.w300,
             fontSize: 18,
-            color: IAIColor.deepBlue,
+            color: IAIColor.separator,
           ),
         ),
       ),

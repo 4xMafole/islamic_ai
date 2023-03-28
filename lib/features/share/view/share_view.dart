@@ -17,10 +17,10 @@ class _ShareViewState extends State<ShareView> {
       appBar: CustomAppBar(
         leadingIconData: Icons.arrow_back_sharp,
         title: const Text(
-          'share',
+          'Share',
           style: TextStyle(
-            fontWeight: FontWeight.w300,
-            fontSize: 18,
+            fontWeight: FontWeight.w400,
+            fontSize: 24,
             color: IAIColor.deepBlue,
           ),
         ),
