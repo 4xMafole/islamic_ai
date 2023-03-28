@@ -4,8 +4,8 @@ import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/sign_up/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
-class SignUpView extends StatelessWidget {
-  const SignUpView({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +29,7 @@ class SignUpView extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const Text(
-                  'Sign Up',
+                  'Sign In',
                   style: TextStyle(
                     fontSize: 32,
                     fontWeight: FontWeight.w600,
@@ -38,7 +38,7 @@ class SignUpView extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Sign up for our app and start enjoying all the features and benefits today!',
+                  'Welcome! Please sign in to access your account and continue using our app.',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,
@@ -83,11 +83,6 @@ class SignUpView extends StatelessWidget {
                 ),
                 const SizedBox(height: 16),
                 const CustomTextField(
-                  hintText: 'Name',
-                  inputType: TextInputType.text,
-                ),
-                const SizedBox(height: 16),
-                const CustomTextField(
                   hintText: 'Email',
                   inputType: TextInputType.emailAddress,
                 ),
@@ -100,47 +95,32 @@ class SignUpView extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    const ToggleButton(),
-                    const SizedBox(width: 8),
-                    Flexible(
-                      child: RichText(
-                        text: const TextSpan(
-                          children: [
-                            TextSpan(
-                              text: 'I agree to the ',
-                              style: TextStyle(color: IAIColor.separator),
-                            ),
-                            TextSpan(
-                              text: 'Terms of Service',
-                              style: TextStyle(color: IAIColor.termsHighlight),
-                            ),
-                            TextSpan(
-                              text: ' and ',
-                              style: TextStyle(color: IAIColor.separator),
-                            ),
-                            TextSpan(
-                              text: 'Privacy Policy',
-                              style: TextStyle(color: IAIColor.termsHighlight),
-                            ),
-                          ],
-                        ),
+                  children: const [
+                    SizedBox(
+                      width: 200,
+                    ),
+                    Text(
+                      'Forgot Password?',
+                      style: TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w400,
+                        color: IAIColor.subTitle,
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 32),
-                const CustomButton(text: 'Create Account'),
+                const CustomButton(text: 'Log In'),
                 const SizedBox(height: 16),
                 RichText(
                   text: const TextSpan(
                     children: [
                       TextSpan(
-                        text: 'Already have an account? ',
+                        text: "Don't have an account? ",
                         style: TextStyle(color: IAIColor.separator),
                       ),
                       TextSpan(
-                        text: 'Sign In',
+                        text: 'Sign Up',
                         style: TextStyle(color: IAIColor.deepBlue),
                       ),
                     ],

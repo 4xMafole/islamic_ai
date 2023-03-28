@@ -20,7 +20,7 @@ class CustomButton extends StatelessWidget {
           BoxShadow(
             offset: Offset(0, 15),
             spreadRadius: -20,
-            blurRadius: 50,
+            blurRadius: 25,
             color: IAIColor.termsHighlight,
           )
         ],

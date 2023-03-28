@@ -14,13 +14,9 @@ class IAITheme {
       ),
       textTheme: ThemeData.light().textTheme.apply(
             fontFamily: 'Poppins',
-            bodyColor: IAIColor.deepBlue,
-            displayColor: IAIColor.deepBlue,
           ),
       primaryTextTheme: ThemeData.light().primaryTextTheme.apply(
             fontFamily: 'Poppins',
-            bodyColor: IAIColor.deepBlue,
-            displayColor: IAIColor.deepBlue,
           ),
     );
   }

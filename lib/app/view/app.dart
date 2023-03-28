@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_ai/features/onboard/onboard.dart';
-import 'package:islamic_ai/features/sign_up/sign_up.dart';
+import 'package:islamic_ai/features/sign_in/view/view.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 import 'package:islamic_ai/l10n/l10n.dart';
-import 'package:islamic_ai/features/splash/splash.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -17,7 +15,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const SignUpView(),
+      home: const SignInView(),
     );
   }
 }
