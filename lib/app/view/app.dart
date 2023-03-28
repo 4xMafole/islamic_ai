@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_ai/features/answer/view/view.dart';
+import 'package:islamic_ai/features/share/view/view.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 import 'package:islamic_ai/l10n/l10n.dart';
 
@@ -15,7 +15,7 @@ class App extends StatelessWidget {
       themeMode: ThemeMode.light,
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const AnswerView(),
+      home: const ShareView(),
     );
   }
 }
