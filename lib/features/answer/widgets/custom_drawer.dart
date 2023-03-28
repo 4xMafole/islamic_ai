@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:islamic_ai/features/theme/theme.dart';
+import 'package:islamic_ai/features/answer/widgets/widgets.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
@@ -11,28 +11,50 @@ class CustomDrawer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: MediaQuery.of(context).size.width * 0.6,
-      color: IAIColor.whiteColor,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           // Add your drawer items here
-          ListTile(
-            leading: const Icon(Icons.home),
-            title: const Text('Home'),
+          const SizedBox(
+            height: 64,
+          ),
+          const ProfileHeader(),
+          const SizedBox(
+            height: 16,
+          ),
+          CustomListTile(
+            icon: Icons.feedback_outlined,
+            title: 'Feedback',
             onTap: () {
               // Handle navigation
             },
           ),
-          ListTile(
-            leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+          CustomListTile(
+            icon: Icons.privacy_tip_outlined,
+            title: 'Term & Conditions',
             onTap: () {
               // Handle navigation
             },
           ),
-          // Add more drawer items as needed
+          CustomListTile(
+            icon: Icons.help_outline_sharp,
+            title: 'Help & Support',
+            onTap: () {
+              // Handle navigation
+            },
+          ),
+          const SizedBox(
+            height: 16,
+          ),
+          CustomListTile(
+            icon: Icons.logout,
+            title: 'Sign Out',
+            onTap: () {
+              // Handle navigation
+            },
+          ),
         ],
       ),
     );

@@ -19,6 +19,8 @@ class _AnswerViewState extends State<AnswerView> {
   Widget build(BuildContext context) {
     return AdvancedDrawer(
       controller: _advancedDrawerController,
+      rtlOpening: true,
+      openRatio: 0.5,
       drawer: CustomDrawer(context: context),
       child: Scaffold(
         appBar: CustomAppBar(
