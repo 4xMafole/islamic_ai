@@ -48,7 +48,8 @@ class IslamicAIRepository
 
   /// Signs up the user with email and password.
   /// Returns an [OUser] instance on successful sign up.
-  /// Throws [IslamicAISignUpWithEmailAndPasswordFailure] if an exception occurs.
+  /// Throws [IslamicAISignUpWithEmailAndPasswordFailure]
+  /// if an exception occurs.
   @override
   Future<OUser> signUpWithEmailAndPassword({
     required OUser oUser,

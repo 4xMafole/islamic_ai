@@ -2,14 +2,13 @@ import 'package:faker/faker.dart';
 import 'package:flutter/material.dart';
 import 'package:islamic_ai/common/widgets/app_logo.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
-import 'package:islamic_ai/features/settings/widgets/feedback_box.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
 class AgreementView extends StatefulWidget {
   const AgreementView({super.key});
 
   @override
-  _AgreementViewState createState() => _AgreementViewState();
+  State<AgreementView> createState() => _AgreementViewState();
 }
 
 class _AgreementViewState extends State<AgreementView> {

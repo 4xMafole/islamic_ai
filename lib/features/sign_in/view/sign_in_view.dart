@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
-import 'package:islamic_ai/features/sign_up/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
 class SignInView extends StatelessWidget {
@@ -38,7 +36,7 @@ class SignInView extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Welcome! Please sign in to access your account and continue using our app.',
+                  '''Welcome! Please sign in to access your account and continue using our app.''',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,

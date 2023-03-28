@@ -37,7 +37,7 @@ class ForgetPasswordView extends StatelessWidget {
                   ),
                   const SizedBox(height: 8),
                   const Text(
-                    "Forgot your password? No worries, just enter your email address and we'll send you a link to reset it.",
+                    '''Forgot your password? No worries, just enter your email address and we'll send you a link to reset it.''',
                     textAlign: TextAlign.justify,
                     style: TextStyle(
                       fontSize: 14,

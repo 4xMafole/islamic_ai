@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/sign_up/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
@@ -38,7 +37,7 @@ class SignUpView extends StatelessWidget {
                 ),
                 const SizedBox(height: 8),
                 const Text(
-                  'Sign up for our app and start enjoying all the features and benefits today!',
+                  '''Sign up for our app and start enjoying all the features and benefits today!''',
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: 14,

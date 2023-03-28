@@ -7,7 +7,7 @@ class ShareView extends StatefulWidget {
   const ShareView({super.key});
 
   @override
-  _ShareViewState createState() => _ShareViewState();
+  State<ShareView> createState() => _ShareViewState();
 }
 
 class _ShareViewState extends State<ShareView> {

@@ -189,6 +189,7 @@ class FirebaseRepository {
 
 /// Firebase user extension
 extension FirebaseUser on firebase_auth.User {
+  /// Firebase user extension
   User get toUser {
     return User(
       id: uid,

@@ -1,5 +1,5 @@
 name: authentication_repository
-description: An Ozare flutter package which manages the authentication domain.
+description: An Islamic AI flutter package which manages the authentication domain.
 version: 0.1.0+1
 publish_to: none
 
@@ -14,8 +14,8 @@ dependencies:
   firebase_core: ^2.7.1
   flutter:
     sdk: flutter
-  json_annotation: ^4.8.0
   google_sign_in: ^6.0.2
+  json_annotation: ^4.8.0
   local_api:
     path: ../local_api
   shared_preferences: ^2.0.18

@@ -9,7 +9,7 @@ class AnswerView extends StatefulWidget {
   const AnswerView({super.key});
 
   @override
-  _AnswerViewState createState() => _AnswerViewState();
+  State<AnswerView> createState() => _AnswerViewState();
 }
 
 class _AnswerViewState extends State<AnswerView> {

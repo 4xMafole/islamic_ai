@@ -8,8 +8,8 @@ import 'package:equatable/equatable.dart';
 class User extends Equatable {
   ///{@macro user}
   const User({
-    this.email,
     required this.id,
+    this.email,
     this.name,
     this.photo,
   });

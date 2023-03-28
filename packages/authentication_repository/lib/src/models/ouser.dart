@@ -1,7 +1,7 @@
-// ignore_for_file: public_member_api_docs
+// ignore_for_file: public_member_api_docs, depend_on_referenced_packages
 
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'ouser.freezed.dart';
 part 'ouser.g.dart';

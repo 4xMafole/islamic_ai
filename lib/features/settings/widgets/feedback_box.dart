@@ -12,7 +12,7 @@ class FeedbackBox extends StatefulWidget {
   final TextInputType inputType;
   final bool hasBorder;
   @override
-  _FeedbackBoxState createState() => _FeedbackBoxState();
+  State<FeedbackBox> createState() => _FeedbackBoxState();
 }
 
 class _FeedbackBoxState extends State<FeedbackBox> {

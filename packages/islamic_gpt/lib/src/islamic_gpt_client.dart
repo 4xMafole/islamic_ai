@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 
 /// An AI package client which interacts with GPT-3 model.

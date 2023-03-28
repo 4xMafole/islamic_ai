@@ -1,3 +1,4 @@
+/// Abstraction repository
 abstract class IslamicGPTRepo {
   /// Sends a [question] to the GPT-3 model and returns the AI-generated answer.
   ///

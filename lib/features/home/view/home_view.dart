@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:islamic_ai/common/widgets/app_logo.dart';
 import 'package:islamic_ai/features/home/widgets/widgets.dart';
-import 'package:islamic_ai/features/theme/theme.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
 
   @override
-  _HomeViewState createState() => _HomeViewState();
+  State<HomeView> createState() => _HomeViewState();
 }
 
 class _HomeViewState extends State<HomeView> {

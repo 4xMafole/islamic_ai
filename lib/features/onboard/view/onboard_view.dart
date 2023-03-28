@@ -43,9 +43,9 @@ class OnBoardView extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16),
                 child: InfoText(
-                  text:
-                      'Islamic Ai will provide answers based on authentic Islamic books, and will provide '
-                      'references. Please note, this is for Reference ONLY, not Fatwah',
+                  text: '''
+Islamic Ai will provide answers based on authentic Islamic books, and will provide 
+                      references. Please note, this is for Reference ONLY, not Fatwah''',
                 ),
               ),
               const SizedBox(height: 32),

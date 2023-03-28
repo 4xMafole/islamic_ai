@@ -8,7 +8,7 @@ class FeedbackView extends StatefulWidget {
   const FeedbackView({super.key});
 
   @override
-  _FeedbackViewState createState() => _FeedbackViewState();
+  State<FeedbackView> createState() => _FeedbackViewState();
 }
 
 class _FeedbackViewState extends State<FeedbackView> {

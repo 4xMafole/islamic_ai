@@ -14,7 +14,7 @@ class CustomSearchField extends StatefulWidget {
   final void Function()? onPressed;
   final bool hasBorder;
   @override
-  _CustomSearchFieldState createState() => _CustomSearchFieldState();
+  State<CustomSearchField> createState() => _CustomSearchFieldState();
 }
 
 class _CustomSearchFieldState extends State<CustomSearchField> {

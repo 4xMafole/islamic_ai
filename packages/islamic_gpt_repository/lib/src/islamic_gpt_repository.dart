@@ -28,7 +28,9 @@ class IslamicGptRepository extends IslamicGPTRepo {
     final answers = List<String>.filled(books.length, '');
     for (var i = 0; i < books.length; i++) {
       final answer = await islamicGPT.answerChat(
-        "$question. Use ${books[i].name} book as reference. Please provide the answer in the following format: '$queryFormat'",
+        '''
+$question. Use ${books[i].name} book as reference. Please provide the answer in the following format: '$queryFormat'
+''',
       );
       answers[i] = answer;
     }

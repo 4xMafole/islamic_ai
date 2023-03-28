@@ -7,7 +7,6 @@ class IAITheme {
     return ThemeData.light().copyWith(
       scaffoldBackgroundColor: IAIColor.whiteColor,
       primaryColor: IAIColor.deepBlue,
-      accentColor: IAIColor.deepBlue,
       appBarTheme: const AppBarTheme(
         backgroundColor: IAIColor.whiteColor,
         titleTextStyle: TextStyle(color: IAIColor.deepBlue),
@@ -25,7 +24,6 @@ class IAITheme {
     return ThemeData.dark().copyWith(
       scaffoldBackgroundColor: IAIColor.primaryBackground,
       primaryColor: Colors.deepPurple,
-      accentColor: Colors.deepPurpleAccent,
       appBarTheme: const AppBarTheme(
         backgroundColor: Colors.deepPurple,
         titleTextStyle: TextStyle(color: IAIColor.whiteColor),

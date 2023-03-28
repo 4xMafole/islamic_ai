@@ -1,8 +1,9 @@
-/// Thrown when ozare api fails.
+/// Thrown when Islamic AI api fails.
 class IslamicAIException implements Exception {
-  /// Thrown when ozare api fails.
+  /// Thrown when Islamic AI api fails.
   const IslamicAIException(this.errorMessage);
 
+  /// Error message
   final String errorMessage;
 }
 

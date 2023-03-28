@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -29,7 +29,7 @@ void main() {
 
       final request = CompleteText(
         prompt:
-            'Give summary of this book, MUSLIMS OF SPAIN: A BRIEF INTRODUCTION TO ALJAMIADO LITERATURE IN GOLDEN AGE SPAIN',
+            '''Give summary of this book, MUSLIMS OF SPAIN: A BRIEF INTRODUCTION TO ALJAMIADO LITERATURE IN GOLDEN AGE SPAIN''',
         model: kTextDavinci3,
         maxTokens: 200,
       );
@@ -38,7 +38,7 @@ void main() {
           // ignore: deprecated_member_use
           .onCompletion(request: request);
 
-      print(response);
+      expect(response, isNotNull);
     });
 
     test(
@@ -57,17 +57,18 @@ void main() {
         final answers = List<String>.filled(books.length, '');
 
         const format =
-            '[summary answer, if it is a list, then list the items first]. \n Book: [Book name] [Book reference, if available]. \n In-book reference: [In-book reference, if available].';
+            '''[summary answer, if it is a list, then list the items first]. \n Book: [Book name] [Book reference, if available]. \n In-book reference: [In-book reference, if available].''';
 
         const question = 'Name the islam principles';
 
         for (var i = 0; i < books.length; i++) {
           final answer = await islamicGpt.answerChat(
-            "$question. Use ${books[i]} book as reference. Please provide the answer in the following format: '$format'",
+            ''' $question. Use ${books[i]} book as reference. Please provide the answer in the following format: '$format' ''',
           );
-          print('$answer\n');
           answers[i] = answer;
         }
+
+        expect(answers, isNotNull);
       },
       timeout: Timeout(Duration(minutes: 1)),
     );

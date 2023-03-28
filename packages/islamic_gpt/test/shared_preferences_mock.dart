@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
 
 class SharedPreferencesMock extends SharedPreferencesStorePlatform {
