@@ -28,6 +28,12 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
           onPressed: onPressed,
         ),
         title: Center(child: title),
+        actions: [
+          IconButton(
+            icon: Opacity(opacity: 0, child: Icon(leadingIconData)),
+            onPressed: null,
+          ),
+        ],
       ),
     );
   }

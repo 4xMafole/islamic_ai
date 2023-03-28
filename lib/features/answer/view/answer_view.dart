@@ -27,6 +27,7 @@ class _AnswerViewState extends State<AnswerView> {
           leadingIconData: Icons.menu,
           onPressed: _advancedDrawerController.showDrawer,
           title: const AppLogo(logoSize: 30, nameSize: 18),
+          
         ),
         body: SafeArea(
           child: SingleChildScrollView(
