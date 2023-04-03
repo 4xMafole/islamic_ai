@@ -16,6 +16,7 @@ dependencies:
   flutter_bloc: ^8.1.2
   flutter_localizations:
     sdk: flutter
+  flutter_native_splash: ^2.2.19
   flutter_svg: ^2.0.4
   intl: ^0.17.0
   islamic_gpt:

@@ -71,6 +71,7 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
               color: IAIColor.subTitle,
             ),
             suffixIcon: IconButton(
+              hoverColor: Colors.transparent,
               icon: const Icon(
                 Icons.mic,
                 color: IAIColor.subTitle,

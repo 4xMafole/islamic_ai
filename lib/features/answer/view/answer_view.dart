@@ -17,7 +17,7 @@ class _AnswerViewState extends State<AnswerView> {
 
   @override
   void dispose() {
-    _advancedDrawerController.dispose(); // Dispose the controller here
+    _advancedDrawerController.dispose(); 
     super.dispose();
   }
 
