@@ -18,7 +18,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
       elevation: 12,
       shadowColor: IAIColor.tabBarActive.withOpacity(0.4),
       child: AppBar(
-        backgroundColor: Theme.of(context).canvasColor,
+        backgroundColor: IAIColor.whiteColor,
         elevation: 0,
         leading: IconButton(
           icon: Icon(

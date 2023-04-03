@@ -78,7 +78,10 @@ class _EditProfileViewState extends State<EditProfileView> {
                     },
                   ),
                   const SizedBox(height: 70),
-                  const CustomButton(text: 'Update Profile')
+                   CustomButton(
+                    text: 'Update Profile',
+                    onTap: () {},
+                  )
                 ],
               ),
             ),

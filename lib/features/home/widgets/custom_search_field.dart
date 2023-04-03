@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/app/app.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
 class CustomSearchField extends StatefulWidget {
@@ -56,6 +57,11 @@ class _CustomSearchFieldState extends State<CustomSearchField> {
           focusNode: _focusNode,
           keyboardType: widget.inputType,
           cursorColor: IAIColor.separator,
+          onSubmitted: (value) {
+            if (widget.hasBorder) {
+              Navigator.of(context).pushReplacementNamed(Routes.answer);
+            }
+          },
           decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: const TextStyle(color: IAIColor.textGray),

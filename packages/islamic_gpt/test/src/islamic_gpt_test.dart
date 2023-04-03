@@ -57,14 +57,15 @@ void main() {
         final answers = List<String>.filled(books.length, '');
 
         const format =
-            '''[summary answer, if it is a list, then list the items first]. \n Book: [Book name] [Book reference, if available]. \n In-book reference: [In-book reference, if available].''';
+            '''[exact words quoted, if it is a list, then list the items first]. \n Book: [Book name] [Book reference, if available]. \n In-book reference: [In-book reference, if available]. \n ''';
 
-        const question = 'Name the islam principles';
+        const question = 'When is Ramadan ?';
 
         for (var i = 0; i < books.length; i++) {
           final answer = await islamicGpt.answerChat(
             ''' $question. Use ${books[i]} book as reference. Please provide the answer in the following format: '$format' ''',
           );
+          print(answer);
           answers[i] = answer;
         }
 

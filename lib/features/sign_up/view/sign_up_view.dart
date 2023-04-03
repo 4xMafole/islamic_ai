@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/app/app.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/sign_up/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
@@ -15,15 +16,18 @@ class SignUpView extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: IAIColor.tabBarInactive,
-                  ),
-                  child: Center(
-                    child: Image.asset('assets/images/clap.png'),
+                Hero(
+                  tag: 'icon_container',
+                  child: Container(
+                    height: 90,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: IAIColor.tabBarInactive,
+                    ),
+                    child: Center(
+                      child: Image.asset('assets/images/clap.png'),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -129,20 +133,27 @@ class SignUpView extends StatelessWidget {
                   ],
                 ),
                 const SizedBox(height: 32),
-                const CustomButton(text: 'Create Account'),
+                CustomButton(
+                  text: 'Create Account',
+                  onTap: () =>
+                      Navigator.of(context).pushReplacementNamed(Routes.home),
+                ),
                 const SizedBox(height: 16),
-                RichText(
-                  text: const TextSpan(
-                    children: [
-                      TextSpan(
-                        text: 'Already have an account? ',
-                        style: TextStyle(color: IAIColor.separator),
-                      ),
-                      TextSpan(
-                        text: 'Sign In',
-                        style: TextStyle(color: IAIColor.deepBlue),
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => Navigator.of(context).pop(),
+                  child: RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: 'Already have an account? ',
+                          style: TextStyle(color: IAIColor.separator),
+                        ),
+                        TextSpan(
+                          text: 'Sign In',
+                          style: TextStyle(color: IAIColor.deepBlue),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

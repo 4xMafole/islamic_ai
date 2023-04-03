@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/app/app.dart';
 import 'package:islamic_ai/features/onboard/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
@@ -53,16 +54,20 @@ Islamic Ai will provide answers based on authentic Islamic books, and will provi
                 padding: const EdgeInsets.all(16),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    Expanded(child: SizedBox()),
-                    BoardTabBar(color: IAIColor.tabBarActive),
-                    SizedBox(width: 8),
-                    BoardTabBar(color: IAIColor.tabBarInactive),
-                    Expanded(child: SizedBox()),
-                    InfoText(
-                      text: 'Next',
+                  children: [
+                    const Expanded(child: SizedBox()),
+                    const BoardTabBar(color: IAIColor.tabBarActive),
+                    const SizedBox(width: 8),
+                    const BoardTabBar(color: IAIColor.tabBarInactive),
+                    const Expanded(child: SizedBox()),
+                    GestureDetector(
+                      onTap: () => Navigator.of(context)
+                          .pushReplacementNamed(Routes.signIn),
+                      child: const InfoText(
+                        text: 'Next',
+                      ),
                     ),
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),

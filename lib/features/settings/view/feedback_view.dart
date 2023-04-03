@@ -31,8 +31,8 @@ class _FeedbackViewState extends State<FeedbackView> {
             ),
             child: Center(
               child: Column(
-                children: const [
-                  Text(
+                children: [
+                  const Text(
                     'Feedback',
                     style: TextStyle(
                       fontWeight: FontWeight.w500,
@@ -40,15 +40,18 @@ class _FeedbackViewState extends State<FeedbackView> {
                       color: IAIColor.blackColor,
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 24,
                   ),
-                  FeedbackBox(
+                  const FeedbackBox(
                     hintText: 'Please give us your honest feedback.',
                     inputType: TextInputType.multiline,
                   ),
-                  SizedBox(height: 32),
-                  CustomButton(text: 'Submit')
+                  const SizedBox(height: 32),
+                  CustomButton(
+                    text: 'Submit',
+                    onTap: () {},
+                  )
                 ],
               ),
             ),

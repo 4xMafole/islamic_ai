@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/app/app.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
@@ -14,15 +15,18 @@ class SignInView extends StatelessWidget {
             padding: const EdgeInsets.all(16),
             child: Column(
               children: [
-                Container(
-                  height: 90,
-                  width: 90,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    color: IAIColor.tabBarInactive,
-                  ),
-                  child: Center(
-                    child: Image.asset('assets/images/clap.png'),
+                Hero(
+                  tag: 'icon_container',
+                  child: Container(
+                    height: 90,
+                    width: 90,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: IAIColor.tabBarInactive,
+                    ),
+                    child: Center(
+                      child: Image.asset('assets/images/clap.png'),
+                    ),
                   ),
                 ),
                 const SizedBox(height: 16),
@@ -93,35 +97,46 @@ class SignInView extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
-                    SizedBox(
+                  children: [
+                    const SizedBox(
                       width: 200,
                     ),
-                    Text(
-                      'Forgot Password?',
-                      style: TextStyle(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w400,
-                        color: IAIColor.subTitle,
+                    GestureDetector(
+                      onTap: () =>
+                          Navigator.pushNamed(context, Routes.forgotPassword),
+                      child: const Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          fontSize: 14,
+                          fontWeight: FontWeight.w400,
+                          color: IAIColor.subTitle,
+                        ),
                       ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 32),
-                const CustomButton(text: 'Log In'),
+                CustomButton(
+                  text: 'Log In',
+                  onTap: () =>
+                      Navigator.of(context).pushReplacementNamed(Routes.home),
+                ),
                 const SizedBox(height: 16),
-                RichText(
-                  text: const TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "Don't have an account? ",
-                        style: TextStyle(color: IAIColor.separator),
-                      ),
-                      TextSpan(
-                        text: 'Sign Up',
-                        style: TextStyle(color: IAIColor.deepBlue),
-                      ),
-                    ],
+                GestureDetector(
+                  onTap: () => Navigator.of(context).pushNamed(Routes.signUp),
+                  child: RichText(
+                    text: const TextSpan(
+                      children: [
+                        TextSpan(
+                          text: "Don't have an account? ",
+                          style: TextStyle(color: IAIColor.separator),
+                        ),
+                        TextSpan(
+                          text: 'Sign Up',
+                          style: TextStyle(color: IAIColor.deepBlue),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
               ],

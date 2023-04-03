@@ -47,7 +47,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const AnswerView());
       case forgotPassword:
         return MaterialPageRoute(
-            builder: (context) => const ForgetPasswordView());
+          builder: (context) => const ForgetPasswordView(),
+        );
       case editProfile:
         return MaterialPageRoute(builder: (context) => const EditProfileView());
       case termsCondition:

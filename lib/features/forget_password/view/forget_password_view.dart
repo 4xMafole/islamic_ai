@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:islamic_ai/app/app.dart';
+import 'package:islamic_ai/common/widgets/app_logo.dart';
 import 'package:islamic_ai/common/widgets/widgets.dart';
 import 'package:islamic_ai/features/theme/theme.dart';
 
@@ -8,6 +10,11 @@ class ForgetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: CustomAppBar(
+        leadingIconData: Icons.arrow_back,
+        onPressed: () => Navigator.pop(context),
+        title: const AppLogo(logoSize: 30, nameSize: 18),
+      ),
       body: SafeArea(
         child: Center(
           child: SingleChildScrollView(
@@ -15,15 +22,18 @@ class ForgetPasswordView extends StatelessWidget {
               padding: const EdgeInsets.all(16),
               child: Column(
                 children: [
-                  Container(
-                    height: 90,
-                    width: 90,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: IAIColor.tabBarInactive,
-                    ),
-                    child: Center(
-                      child: Image.asset('assets/images/envelope.png'),
+                  Hero(
+                    tag: 'icon_container',
+                    child: Container(
+                      height: 90,
+                      width: 90,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: IAIColor.tabBarInactive,
+                      ),
+                      child: Center(
+                        child: Image.asset('assets/images/envelope.png'),
+                      ),
                     ),
                   ),
                   const SizedBox(height: 16),
@@ -51,7 +61,11 @@ class ForgetPasswordView extends StatelessWidget {
                     inputType: TextInputType.emailAddress,
                   ),
                   const SizedBox(height: 32),
-                  const CustomButton(text: 'Continue'),
+                  CustomButton(
+                    text: 'Continue',
+                    onTap: () => Navigator.of(context)
+                        .pushReplacementNamed(Routes.signIn),
+                  ),
                 ],
               ),
             ),
