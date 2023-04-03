@@ -62,6 +62,7 @@ class _CustomTextFieldState extends State<CustomTextField> {
             border: InputBorder.none,
             suffixIcon: widget.isPassword
                 ? IconButton(
+                    hoverColor: Colors.transparent,
                     icon: Icon(
                       _obscureText
                           ? Icons.visibility_off_outlined

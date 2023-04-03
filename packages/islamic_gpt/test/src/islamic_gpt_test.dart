@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_constructors, depend_on_referenced_packages
 
 import 'package:chat_gpt_sdk/chat_gpt_sdk.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:islamic_gpt/islamic_gpt.dart';
 import 'package:shared_preferences_platform_interface/shared_preferences_platform_interface.dart';
@@ -65,7 +66,9 @@ void main() {
           final answer = await islamicGpt.answerChat(
             ''' $question. Use ${books[i]} book as reference. Please provide the answer in the following format: '$format' ''',
           );
-          print(answer);
+          if (kDebugMode) {
+            print(answer);
+          }
           answers[i] = answer;
         }
 

@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_advanced_drawer/flutter_advanced_drawer.dart';
+import 'package:islamic_ai/app/app.dart';
 import 'package:islamic_ai/features/answer/widgets/widgets.dart';
 
 class CustomDrawer extends StatelessWidget {
   const CustomDrawer({
     super.key,
     required this.context,
+    required this.controller,
   });
 
   final BuildContext context;
+  final AdvancedDrawerController controller;
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +24,7 @@ class CustomDrawer extends StatelessWidget {
           const SizedBox(
             height: 64,
           ),
-          const ProfileHeader(),
+          ProfileHeader(drawerController: controller),
           const SizedBox(
             height: 16,
           ),
@@ -28,21 +32,24 @@ class CustomDrawer extends StatelessWidget {
             icon: Icons.feedback_outlined,
             title: 'Feedback',
             onTap: () {
-              // Handle navigation
+              controller.hideDrawer();
+              Navigator.pushNamed(context, Routes.feedback);
             },
           ),
           CustomListTile(
             icon: Icons.privacy_tip_outlined,
             title: 'Term & Conditions',
             onTap: () {
-              // Handle navigation
+              controller.hideDrawer();
+              Navigator.pushNamed(context, Routes.termsCondition);
             },
           ),
           CustomListTile(
             icon: Icons.help_outline_sharp,
             title: 'Help & Support',
             onTap: () {
-              // Handle navigation
+              controller.hideDrawer();
+              Navigator.pushNamed(context, Routes.helpSupport);
             },
           ),
           const SizedBox(
@@ -52,7 +59,8 @@ class CustomDrawer extends StatelessWidget {
             icon: Icons.logout,
             title: 'Sign Out',
             onTap: () {
-              // Handle navigation
+              controller.hideDrawer();
+              Navigator.pushNamed(context, Routes.signIn);
             },
           ),
         ],

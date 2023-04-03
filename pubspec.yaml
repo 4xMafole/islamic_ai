@@ -22,6 +22,7 @@ dependencies:
     path: ./packages/islamic_gpt
   islamic_gpt_repository:
     path: ./packages/islamic_gpt_repository
+  loading_animation_widget: ^1.2.0+4
   local_api:
     path: ./packages/local_api
 

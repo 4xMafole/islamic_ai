@@ -51,17 +51,17 @@ class SignInView extends StatelessWidget {
                 const SizedBox(height: 16),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
-                  children: const [
+                  children: [
                     SignInOption(
                       assetPath: 'assets/icons/apple.svg',
                       text: 'Apple',
-                      bgColor: IAIColor.containerBackground,
+                      onTap: () {},
                     ),
-                    SizedBox(width: 16),
+                    const SizedBox(width: 16),
                     SignInOption(
                       assetPath: 'assets/icons/google.svg',
                       text: 'Google',
-                      bgColor: IAIColor.containerBackground,
+                      onTap: () {},
                     ),
                   ],
                 ),

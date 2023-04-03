@@ -17,7 +17,7 @@ class _FeedbackViewState extends State<FeedbackView> {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIconData: Icons.arrow_back,
-        onPressed: () => Navigator.canPop(context),
+        onPressed: () => Navigator.pop(context),
         title: const AppLogo(logoSize: 30, nameSize: 18),
       ),
       body: SafeArea(
@@ -50,7 +50,9 @@ class _FeedbackViewState extends State<FeedbackView> {
                   const SizedBox(height: 32),
                   CustomButton(
                     text: 'Submit',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   )
                 ],
               ),

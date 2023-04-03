@@ -21,9 +21,9 @@ class _EditProfileViewState extends State<EditProfileView> {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIconData: Icons.arrow_back,
-        onPressed: () => Navigator.canPop(context),
+        onPressed: () => Navigator.pop(context),
         title: const Text(
-          'Profile',
+          'Edit Profile',
           style: TextStyle(
             fontWeight: FontWeight.w300,
             fontSize: 18,
@@ -78,9 +78,11 @@ class _EditProfileViewState extends State<EditProfileView> {
                     },
                   ),
                   const SizedBox(height: 70),
-                   CustomButton(
+                  CustomButton(
                     text: 'Update Profile',
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.pop(context);
+                    },
                   )
                 ],
               ),

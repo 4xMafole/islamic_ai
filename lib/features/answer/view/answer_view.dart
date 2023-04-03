@@ -16,18 +16,26 @@ class _AnswerViewState extends State<AnswerView> {
   final _advancedDrawerController = AdvancedDrawerController();
 
   @override
+  void dispose() {
+    _advancedDrawerController.dispose(); // Dispose the controller here
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return AdvancedDrawer(
       controller: _advancedDrawerController,
       rtlOpening: true,
       openRatio: 0.5,
-      drawer: CustomDrawer(context: context),
+      drawer: CustomDrawer(
+        context: context,
+        controller: _advancedDrawerController,
+      ),
       child: Scaffold(
         appBar: CustomAppBar(
           leadingIconData: Icons.menu,
           onPressed: _advancedDrawerController.showDrawer,
           title: const AppLogo(logoSize: 30, nameSize: 18),
-          
         ),
         body: SafeArea(
           child: SingleChildScrollView(

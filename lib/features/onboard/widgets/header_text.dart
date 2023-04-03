@@ -21,6 +21,7 @@ class HeaderText extends StatelessWidget {
       style: Theme.of(context).primaryTextTheme.titleMedium!.copyWith(
             fontWeight: fontWeight,
             fontSize: fontSize,
+            color: IAIColor.deepBlue,
             // color: color,
           ),
     );

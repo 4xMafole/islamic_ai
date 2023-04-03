@@ -22,10 +22,6 @@ class OnBoardView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: const [
                   HeaderText(text: 'Ask Islamic Ai'),
-                  AssetImagePath(
-                    assetPath: 'assets/images/perfect.png',
-                    color: Colors.transparent,
-                  ),
                 ],
               ),
               const SizedBox(height: 8),
@@ -37,7 +33,6 @@ class OnBoardView extends StatelessWidget {
                     // color: IAIColor.textBlue,
                     fontWeight: FontWeight.w500,
                   ),
-                  AssetImagePath(assetPath: 'assets/images/perfect.png'),
                 ],
               ),
               const SizedBox(height: 24),
@@ -55,19 +50,15 @@ Islamic Ai will provide answers based on authentic Islamic books, and will provi
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    const Expanded(child: SizedBox()),
-                    const BoardTabBar(color: IAIColor.tabBarActive),
-                    const SizedBox(width: 8),
-                    const BoardTabBar(color: IAIColor.tabBarInactive),
-                    const Expanded(child: SizedBox()),
+                  
                     GestureDetector(
                       onTap: () => Navigator.of(context)
                           .pushReplacementNamed(Routes.signIn),
                       child: const InfoText(
-                        text: 'Next',
+                        text: 'Get Started',
+                        color: IAIColor.tabBarActive,
                       ),
                     ),
-                    const SizedBox(height: 16),
                   ],
                 ),
               ),

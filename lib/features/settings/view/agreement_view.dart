@@ -17,7 +17,7 @@ class _AgreementViewState extends State<AgreementView> {
     return Scaffold(
       appBar: CustomAppBar(
         leadingIconData: Icons.arrow_back,
-        onPressed: () => Navigator.canPop(context),
+        onPressed: () => Navigator.pop(context),
         title: const AppLogo(logoSize: 30, nameSize: 18),
       ),
       body: SafeArea(
