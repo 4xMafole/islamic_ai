@@ -17,7 +17,7 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   flutter_native_splash: ^2.2.19
-  flutter_svg: ^2.0.4
+  flutter_svg: ^2.0.5
   intl: ^0.17.0
   islamic_gpt:
     path: ./packages/islamic_gpt
